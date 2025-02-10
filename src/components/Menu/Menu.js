@@ -10,7 +10,7 @@ const Menu = () => {
                <Link to="/">Coffee house</Link>
             </li>
             <li className={styles.nav__item}>
-               <Link to="/product">Our coffee</Link>
+               <Link to="/category">Our coffee</Link>
             </li>
             <li className={styles.nav__item}>
                <Link to="/info">For your pleasure</Link>

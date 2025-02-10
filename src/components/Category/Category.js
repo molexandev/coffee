@@ -1,7 +1,7 @@
 import React from 'react';
-import HeaderAdd from '../HeaderAdd/.HeaderAdd';
+import HeaderAdd from '../Menu/Menu';
 
-const ForYourPleasure = () => {
+const Category = () => {
    return (
       <div className="container">
          <HeaderAdd />
@@ -9,4 +9,4 @@ const ForYourPleasure = () => {
    );
 };
 
-export default ForYourPleasure;
+export default Category;

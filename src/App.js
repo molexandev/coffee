@@ -1,25 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
 
-// Імпортуємо компоненти
-import Menu from './components/Menu/Menu';
-import Main from './components/Main/Main';
+// import Menu from './components/Menu/Menu';
+import HomePage from './components/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
-import ProductCard from './components/ProductCard/ProductCard';
-import Header from './components/Header/Header';
+// import ProductCard from './components/ProductCard/ProductCard';
+// import Header from './components/Header/Header';
 import ForYourPleasure from './components/ForYourPleasure/ForYourPleasure';
+import Category from './components/Category/Category';
 
 function App() {
    return (
       <Router>
          <div className="App">
-            <Header />
+            {/* <Header /> */}
             {/* <Menu /> */}
             <Routes>
-               <Route path="/" element={<Main />} />
-               <Route path="/product" element={<ProductCard />} />
+               <Route path="/" element={<HomePage />} />
+               <Route path="/category" element={<Category />} />
                <Route path="/info" element={<ForYourPleasure />} />
-               {/* Додаємо більше маршрутів при необхідності */}
             </Routes>
             <Footer />
          </div>
