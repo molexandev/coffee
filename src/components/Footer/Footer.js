@@ -4,7 +4,9 @@ import styles from './Footer.module.scss';
 const Footer = () => {
    return (
       <footer className={styles.footer}>
-         <p>© 2025 Coffee Shop. All rights reserved.</p>
+         <div className="container">
+            <p>© 2025 Coffee Shop. All rights reserved.</p>
+         </div>
       </footer>
    );
 };

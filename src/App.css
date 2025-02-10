@@ -1,38 +1,99 @@
+html {
+   box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+ul[class],
+ol[class] {
+   padding: 0;
+}
+ul,
+ol {
+   list-style: none;
+   padding: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol[class],
+ul[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+   margin: 0;
+}
+img {
+   max-width: 100%;
+   display: block;
+}
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+
+/* Забираємо стрілки у input type "number" */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type='number']:hover,
+input[type='number']:focus {
+   appearance: none;
+   -moz-appearance: textfield;
+}
+
+/* ========================== */
+
+body,
+#root,
 .App {
-  text-align: center;
+   height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+   text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+   border: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* =============================*/
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
 }
-
-.App-link {
-  color: #61dafb;
+.main {
+   flex: 1 1 auto;
+   /* padding-top: 100px; */
+   z-index: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+   max-width: 1470px;
+   padding: 0 15px;
+   margin: 0 auto;
 }
+/* Сховати елемент не видаляючи з DOM */
+/* .visually-hidden {
+   position: absolute;
+   left: -10000px;
+   top: auto;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+} */
