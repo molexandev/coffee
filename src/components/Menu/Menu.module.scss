@@ -1,8 +1,35 @@
+@use '../../styles/variables' as *;
+
 .nav {
+   padding-top: 30px;
+   padding-left: 149px;
    &__list {
+      min-height: 40px;
       display: flex;
       justify-content: start;
-      align-items: center;
+      align-items: end;
       gap: 0 40px;
+      color: #fff;
+   }
+   &__list:first-child {
+      padding-left: 31px;
+      position: relative;
+      &::before {
+         content: '';
+         position: absolute;
+         width: 35px;
+         height: 35px;
+         left: 0;
+         top: 0;
+         background-image: url(/assets/images/logo.svg);
+      }
+   }
+   a {
+      color: #fff;
+      transition: all 0.3s;
+      @extend %Merienda-400;
+   }
+   a:hover {
+      color: $hover;
    }
 }
