@@ -1,0 +1,76 @@
+// @use '../../styles/global';
+@use '../../styles/variables' as *;
+
+.about_us {
+   &__wrapper {
+      padding: 80px 0 101px;
+      max-width: 590px;
+      margin: 0 auto;
+      text-align: center;
+   }
+   &__title {
+      color: #000;
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      @extend %decor-dark;
+   }
+   &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px 0;
+   }
+   &__text {
+      font-size: 0.875rem;
+      color: #000;
+   }
+}
+.our_best {
+   &__wrapper {
+      padding: 80px 0 110px;
+      background-image: url(/assets/images/our-best-bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #000;
+   }
+   &__title {
+      font-size: 1.5rem;
+      text-align: center;
+      @extend %Merienda-400;
+      margin-bottom: 39px;
+   }
+   &__inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__product_card {
+      padding: 22px 10px 22px;
+      text-align: center;
+      max-width: 220px;
+      border-radius: 8px 8px 8px 8px;
+      background-image: url(/assets/images/product-card-bg.png);
+   }
+   &__img_box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 14px;
+   }
+   &__img {
+   }
+   &__link_box {
+   }
+   &__link {
+      color: #000;
+      @extend %Merienda-400;
+      font-size: 0.875rem;
+      text-align: center;
+   }
+   &__price {
+   }
+}
