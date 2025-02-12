@@ -1,11 +1,31 @@
-.footer {
-   background-color: #333;
-   color: white;
-   padding: 20px;
-   text-align: center;
+@use '../../styles/variables' as *;
 
-   p {
-      margin: 0;
-      font-size: 14px;
+.footer {
+   color: #000;
+   position: relative;
+   &__wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 52px 0 20px 0;
+      nav {
+         padding: 0;
+      }
+      svg {
+         fill: #000;
+         stroke: #000;
+      }
+      a {
+         color: #000;
+      }
+      a:hover {
+         .nav__logo {
+            // fill: $hover;
+            stroke: #ff0;
+         }
+      }
+   }
+   &__inner {
+      @extend %decor-dark;
    }
 }

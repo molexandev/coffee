@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-// import './App.scss';
+import './styles/global.scss';
+import './styles/variables.scss';
 
 // import Menu from './components/Menu/Menu';
 import HomePage from './components/HomePage/HomePage';

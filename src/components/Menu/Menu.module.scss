@@ -2,7 +2,7 @@
 
 .nav {
    padding-top: 30px;
-   padding-left: 149px;
+   padding-left: 150px;
    &__list {
       min-height: 40px;
       display: flex;
@@ -10,26 +10,42 @@
       align-items: end;
       gap: 0 40px;
       color: #fff;
+      position: relative;
    }
    &__list:first-child {
       padding-left: 31px;
-      position: relative;
-      &::before {
-         content: '';
-         position: absolute;
-         width: 35px;
-         height: 35px;
-         left: 0;
-         top: 0;
-         background-image: url(/assets/images/logo.svg);
+      // position: relative;
+      // &::before {
+      //    content: '';
+      //    position: absolute;
+      //    width: 35px;
+      //    height: 35px;
+      //    left: -5px;
+      //    top: 0;
+      //    background-image: url(/assets/images/logo.svg);
+      // }
+   }
+   &__logo {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      left: -5px;
+      top: 0;
+      transition: all 0.3s;
+      svg {
+         fill: #fff;
       }
    }
-   a {
+   &__link {
       color: #fff;
       transition: all 0.3s;
       @extend %Merienda-400;
    }
-   a:hover {
+   &__link:hover {
       color: $hover;
+      .nav__logo {
+         fill: $hover;
+         stroke: $hover;
+      }
    }
 }
