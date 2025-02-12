@@ -34,6 +34,7 @@
       background-size: cover;
       background-position: center;
       color: #000;
+      height: 100%;
    }
    &__title {
       font-size: 1.5rem;
@@ -43,15 +44,21 @@
    }
    &__inner {
       max-width: 800px;
+      min-height: 240px;
+      height: 100%;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: center;
+      align-items: start;
+      gap: 0 70px;
    }
    &__product_card {
+      display: flex;
+      flex-direction: column;
+      height: 240px;
+      max-width: 220px;
       padding: 22px 10px 22px;
       text-align: center;
-      max-width: 220px;
       border-radius: 8px 8px 8px 8px;
       background-image: url(/assets/images/product-card-bg.png);
    }
@@ -60,17 +67,20 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 14px;
-   }
-   &__img {
+      flex-grow: 1;
    }
    &__link_box {
+      margin-bottom: 10px;
+      min-height: 0;
    }
    &__link {
       color: #000;
-      @extend %Merienda-400;
       font-size: 0.875rem;
       text-align: center;
    }
    &__price {
+      @extend %Merienda-700;
+      font-size: 0.875rem;
+      text-align: right;
    }
 }

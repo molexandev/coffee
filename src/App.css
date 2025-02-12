@@ -79,7 +79,7 @@ button {
    flex-direction: column;
 }
 .main {
-   flex: 1 1 auto;
+   flex: 1 0 auto;
    /* padding-top: 100px; */
    z-index: 0;
 }
