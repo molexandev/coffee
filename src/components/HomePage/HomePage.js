@@ -42,11 +42,16 @@ const HomePage = () => {
                      <div className={styles.our_best__inner}>
                         <div className={styles.our_best__product_card}>
                            <div className={styles.our_best__img_box}>
-                              <img
-                                 className={styles.our_best__img}
-                                 src={require('../../assets/images/coffee-1.png')}
-                                 alt="coffee"
-                              />
+                              <Link
+                                 className={styles.our_best__img_link}
+                                 to="/product"
+                              >
+                                 <img
+                                    className={styles.our_best__img}
+                                    src={require('../../assets/images/coffee-1.png')}
+                                    alt="coffee"
+                                 />
+                              </Link>
                               {/* <img src={coffeeImage} alt="coffee" /> */}
                            </div>
                            <div className={styles.our_best__link_box}>
@@ -61,11 +66,16 @@ const HomePage = () => {
                         </div>
                         <div className={styles.our_best__product_card}>
                            <div className={styles.our_best__img_box}>
-                              <img
-                                 className={styles.our_best__img}
-                                 src={require('../../assets/images/coffee-2.png')}
-                                 alt="coffee"
-                              />
+                              <Link
+                                 className={styles.our_best__img_link}
+                                 to="/product"
+                              >
+                                 <img
+                                    className={styles.our_best__img}
+                                    src={require('../../assets/images/coffee-2.png')}
+                                    alt="coffee"
+                                 />
+                              </Link>
                               {/* <img src={coffeeImage} alt="coffee" /> */}
                            </div>
                            <div className={styles.our_best__link_box}>
@@ -80,11 +90,16 @@ const HomePage = () => {
                         </div>
                         <div className={styles.our_best__product_card}>
                            <div className={styles.our_best__img_box}>
-                              <img
-                                 className={styles.our_best__img}
-                                 src={require('../../assets/images/coffee-3.png')}
-                                 alt="coffee"
-                              />
+                              <Link
+                                 className={styles.our_best__img_link}
+                                 to="/product"
+                              >
+                                 <img
+                                    className={styles.our_best__img}
+                                    src={require('../../assets/images/coffee-3.png')}
+                                    alt="coffee"
+                                 />
+                              </Link>
                               {/* <img src={coffeeImage} alt="coffee" /> */}
                            </div>
                            <div className={styles.our_best__link_box}>

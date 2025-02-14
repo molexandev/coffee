@@ -4,11 +4,9 @@ import './App.css';
 import './styles/global.scss';
 import './styles/variables.scss';
 
-// import Menu from './components/Menu/Menu';
 import HomePage from './components/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
 import ProductCard from './components/ProductCard/ProductCard';
-// import Header from './components/Header/Header';
 import ForYourPleasure from './components/ForYourPleasure/ForYourPleasure';
 import Category from './components/Category/Category';
 

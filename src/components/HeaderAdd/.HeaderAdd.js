@@ -4,12 +4,12 @@ import styles from '../HeaderAdd/HeaderAdd.module.scss';
 
 const HeaderAdd = () => {
    return (
-      <div>
-         <div className="container">
-            <Menu />
-            <div className="aaaaaaa">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+      <header className={styles.header_add}>
+         <Menu />
+         <div className={styles.header_add__wrapper}>
+            <h2 className={styles.header_add__title}>Our Coffee</h2>
          </div>
-      </div>
+      </header>
    );
 };
 

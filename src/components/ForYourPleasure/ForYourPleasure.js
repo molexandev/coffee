@@ -3,9 +3,14 @@ import HeaderAdd from '../HeaderAdd/.HeaderAdd';
 
 const ForYourPleasure = () => {
    return (
-      <div className="container">
+      <>
          <HeaderAdd />
-      </div>
+         <main className="main">
+            <div className="container">
+               <div className="foryoupleasure">for your pleasure</div>
+            </div>
+         </main>
+      </>
    );
 };
 
