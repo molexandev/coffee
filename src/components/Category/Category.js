@@ -1,9 +1,9 @@
 import React from 'react';
+import styles from './Category.module.scss';
 import HeaderAdd from '../HeaderAdd/.HeaderAdd';
 import InfoBlock from '../InfoBlock/InfoBlock';
 import Search from '../Search/Search';
-import ProductItem from '../ProductItem/ProductItem';
-import styles from './Category.module.scss';
+import Products from '../Products/Products';
 
 const Category = () => {
    return (
@@ -38,7 +38,7 @@ const Category = () => {
                   <Search />
                </section>
                <section className={styles.product_items}>
-                  <ProductItem />
+                  <Products />
                </section>
             </div>
          </main>

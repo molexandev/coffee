@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header/Header';
-import styles from './HomePage.module.scss';
 import { Link } from 'react-router-dom';
+import styles from './HomePage.module.scss';
 
 // import coffeeImage from '../../assets/images/coffee-1.png';
 
@@ -13,7 +13,12 @@ const HomePage = () => {
             <div className="container">
                <section className={styles.about_us}>
                   <div className={styles.about_us__wrapper}>
-                     <h3 className={styles.about_us__title}>About us</h3>
+                     <h3
+                        className={styles.about_us__title}
+                        style={{ marginBottom: '39px' }}
+                     >
+                        About us
+                     </h3>
                      <div className={styles.about_us__content}>
                         <p className={styles.about_us__text}>
                            Extremity sweetness difficult behaviour he of. On

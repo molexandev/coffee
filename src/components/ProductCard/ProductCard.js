@@ -5,7 +5,10 @@ import HeaderAdd from '../HeaderAdd/.HeaderAdd';
 const ProductCard = () => {
    return (
       <>
-         <HeaderAdd />
+         <HeaderAdd
+            title="Our coffee"
+            banner={require('../../assets/images/header-add-banner.jpg')}
+         />
          <div className="container">
             ProductCard{' '}
             <p>
