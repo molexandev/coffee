@@ -1,9 +1,8 @@
 .products {
    &__wrapper {
-      padding: 0 320px;
+      padding: 0 320px 30px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 60px 70px;
-      // justify-items: space-between;
    }
 }

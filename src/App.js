@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
 import './styles/global.scss';
 import './styles/variables.scss';
 
@@ -13,51 +12,7 @@ import Category from './components/Category/Category';
 class App extends Component {
    constructor(props) {
       super(props);
-      this.state = {
-         data: [
-            {
-               img: 'assets/images/product-item-img.png',
-               name: 'AROMISTICO Coffee 1 kg',
-               origin: 'Columbia',
-               price: 6.99,
-            },
-            {
-               img: 'assets/images/product-item-img.png',
-               name: 'DripLux Coffee 1 kg',
-               origin: 'Columbia',
-               price: 98.99,
-               currency: '$',
-            },
-            {
-               img: 'assets/images/product-item-img.png',
-               name: 'BeanZee Coffee 1 kg',
-               origin: 'Brazil',
-               price: 3.99,
-               currency: '$',
-            },
-            {
-               img: 'assets/images/product-item-img.png',
-               name: 'MochaX Coffee 1 kg',
-               origin: 'Kenya',
-               price: 5.55,
-               currency: '$',
-            },
-            {
-               img: 'assets/images/product-item-img.png',
-               name: 'BrewJoy Coffee 1 kg',
-               origin: 'Brazil',
-               price: 7.77,
-               currency: '$',
-            },
-            {
-               img: 'assets/images/product-item-img.png',
-               name: 'CafeVibe Coffee 1 kg',
-               origin: 'Columbia',
-               price: 9.99,
-               currency: '$',
-            },
-         ],
-      };
+      this.state = {};
    }
 
    render() {
