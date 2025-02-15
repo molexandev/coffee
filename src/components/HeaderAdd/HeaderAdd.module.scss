@@ -3,14 +3,23 @@
    width: 100%;
    margin: 0 auto;
    padding: 0 10px;
-   background-image: url(../../assets/images/header-add-banner.jpg);
+   // background-image: url(../../assets/images/header-add-banner.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
    &__wrapper {
-      padding: 60px 0 85px;
+      padding: 0 0 85px;
+      position: relative;
+   }
+   &__banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -100;
    }
    &__title {
+      padding-top: 60px;
       font-size: 2.5rem;
       color: #fff;
       text-align: center;
