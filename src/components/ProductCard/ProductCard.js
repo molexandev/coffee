@@ -9,15 +9,9 @@ const ProductCard = () => {
             title="Our coffee"
             banner={require('../../assets/images/header-add-banner.jpg')}
          />
-         <div className="container">
-            ProductCard{' '}
-            <p>
-               AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            </p>
-            <p>
-               FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-            </p>
-         </div>
+         <main className="main">
+            <div className="container"></div>
+         </main>
       </>
    );
 };
