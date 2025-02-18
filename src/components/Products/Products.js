@@ -62,7 +62,6 @@ class Products extends Component {
                      currency={product.currency}
                   />
                ))}
-               {/* <ProductItem /> */}
             </div>
          </div>
       );

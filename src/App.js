@@ -12,8 +12,19 @@ import Category from './components/Category/Category';
 class App extends Component {
    constructor(props) {
       super(props);
-      this.state = {};
+      this.state = {
+         country: '',
+         productName: '',
+      };
    }
+
+   onProductNameChange = (event) => {
+      this.setState({ productName: event.target.value });
+   };
+
+   onCountryChange = (e) => {
+      this.setState({ country: e.target.value });
+   };
 
    render() {
       return (
