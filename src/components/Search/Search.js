@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Search.module.scss';
 
-const Search = () => {
+const Search = (onProductNameChange) => {
    return (
       <div className="container">
          <div className={styles.search__wrapper}>
@@ -14,6 +14,7 @@ const Search = () => {
                   type="text"
                   id="search"
                   placeholder="start typing here..."
+                  value={onProductNameChange}
                />
             </div>
             <div className={styles.search__buttons}>

@@ -38,8 +38,20 @@ class App extends Component {
                      <Route path="/product" element={<ProductCard />} />
                   </Routes>
                   <Footer />
+                  {/* <div
+                     className="aaa"
+                     style={{
+                        width: 500,
+                        height: 500,
+                        backgroundColor: 'red',
+                        color: 'black',
+                     }}
+                  >
+                     {this.state.productName}
+                  </div> */}
                </div>
             </div>
+            <search onProductNameChange={this.onProductNameChange} />
          </Router>
       );
    }
