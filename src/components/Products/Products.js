@@ -47,6 +47,20 @@ class Products extends Component {
             price: 9.99,
             currency: '$',
          },
+         {
+            img: require('../../assets/images/product-item-img.png'),
+            name: 'CafeVibe Coffee 5 kg',
+            origin: 'Brazil',
+            price: 19.99,
+            currency: '$',
+         },
+         {
+            img: require('../../assets/images/product-item-img.png'),
+            name: 'CafeVibe Coffee 7 kg',
+            origin: 'Kenya',
+            price: 29.99,
+            currency: '$',
+         },
       ];
 
       return (
