@@ -13,20 +13,87 @@ class App extends Component {
    constructor(props) {
       super(props);
       this.state = {
-         country: '',
-         productName: '',
+         products: [
+            {
+               img: require('./assets/images/product-item-img.png'),
+               name: 'AROMISTICO Coffee 1 kg',
+               origin: 'Columbia',
+               price: 6.99,
+               currency: '$',
+            },
+            {
+               img: require('./assets/images/product-item-img.png'),
+               name: 'DripLux Coffee 10 kg',
+               origin: 'Columbia',
+               price: 98.99,
+               currency: '$',
+            },
+            {
+               img: require('./assets/images/product-item-img.png'),
+               name: 'BeanZee Coffee 1 kg',
+               origin: 'Brazil',
+               price: 3.99,
+               currency: '$',
+            },
+            {
+               img: require('./assets/images/product-item-img.png'),
+               name: 'MochaX Coffee 1 kg',
+               origin: 'Kenya',
+               price: 5.55,
+               currency: '$',
+            },
+            {
+               img: require('./assets/images/product-item-img.png'),
+               name: 'BrewJoy Coffee 2 kg',
+               origin: 'Brazil',
+               price: 7.77,
+               currency: '$',
+            },
+            {
+               img: require('./assets/images/product-item-img.png'),
+               name: 'CafeVibe Coffee 3 kg',
+               origin: 'Columbia',
+               price: 9.99,
+               currency: '$',
+            },
+            {
+               img: require('./assets/images/product-item-img.png'),
+               name: 'CafeVibe Coffee 5 kg',
+               origin: 'Brazil',
+               price: 19.99,
+               currency: '$',
+            },
+            {
+               img: require('./assets/images/product-item-img.png'),
+               name: 'CafeVibe Coffee 7 kg',
+               origin: 'Kenya',
+               price: 29.99,
+               currency: '$',
+            },
+         ],
+         term: '',
       };
    }
 
-   onProductNameChange = (event) => {
-      this.setState({ productName: event.target.value });
+   searchName = (items, term) => {
+      if (term.length === 0) {
+         return items;
+      }
+
+      return items.filter((item) => {
+         return item.name.indexOf(term) > -1;
+      });
    };
 
-   onCountryChange = (country) => {
-      this.setState({ country });
+   onUpdateSearch = (term) => {
+      this.setState({ term });
    };
 
    render() {
+      const { products, term } = this.state;
+      const visibleData = this.searchName(products, term);
+      // console.log(visibleData);
+
       return (
          <Router>
             <div className="App">
@@ -36,10 +103,8 @@ class App extends Component {
                         path="/category"
                         element={
                            <Category
-                              onProductNameChange={this.onProductNameChange}
-                              onCountryChange={this.onCountryChange}
-                              productName={this.state.productName} // Передаємо назву продукту
-                              country={this.state.country} // Передаємо вибрану країну
+                              data={visibleData}
+                              onUpdateSearch={this.onUpdateSearch}
                            />
                         }
                      />

@@ -6,17 +6,17 @@ class ProductItem extends Component {
    constructor(props) {
       super(props);
       this.state = {
-         img:
-            this.props.img ||
-            require('../../assets/images/product-item-img.png'),
-         name: this.props.name || 'Solimo Coffee Beans 2 kg',
-         origin: this.props.origin || 'Brazil',
-         price: this.props.price || 10.73,
-         currency: this.props.currency || '$',
+         // img:
+         //    this.props.img ||
+         //    require('../../assets/images/product-item-img.png'),
+         // name: this.props.name || 'Solimo Coffee Beans 2 kg',
+         // origin: this.props.origin || 'Brazil',
+         // price: this.props.price || 10.73,
+         // currency: this.props.currency || '$',
       };
    }
    render() {
-      const { img, name, origin, price, currency } = this.state;
+      const { img, name, origin, price, currency } = this.props;
 
       return (
          <div className={styles.product_item}>
