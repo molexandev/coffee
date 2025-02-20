@@ -9,6 +9,12 @@ class Search extends Component {
       };
    }
 
+   onUpdateSearch = (e) => {
+      const term = e.target.value;
+      this.setState({ term });
+      this.props.onUpdateSearch(term);
+   };
+
    render() {
       return (
          <div className="container">
@@ -22,6 +28,8 @@ class Search extends Component {
                      type="text"
                      id="search"
                      placeholder="start typing here..."
+                     value={this.state.term}
+                     onChange={this.onUpdateSearch}
                      // onChange={onProductNameChange}
                   />
                </div>
