@@ -5,12 +5,7 @@ import InfoBlock from '../InfoBlock/InfoBlock';
 import Search from '../Search/Search';
 import Products from '../Products/Products';
 
-const Category = ({
-   onProductNameChange,
-   onCountryChange,
-   productName,
-   country,
-}) => {
+const Category = () => {
    return (
       <>
          <HeaderAdd
@@ -40,13 +35,10 @@ const Category = ({
                   />
                </section>
                <section className={styles.search}>
-                  <Search
-                     onProductNameChange={onProductNameChange}
-                     onCountryChange={onCountryChange}
-                  />
+                  <Search />
                </section>
                <section className={styles.product_items}>
-                  <Products productName={productName} country={country} />
+                  <Products />
                </section>
             </div>
          </main>
