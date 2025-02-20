@@ -4,6 +4,8 @@ import ProductItem from '../ProductItem/ProductItem';
 
 class Products extends Component {
    render() {
+      const { productName = '', country = '' } = this.props; // Отримуємо пропси для фільтрації
+
       const products = [
          {
             img: require('../../assets/images/product-item-img.png'),
@@ -63,10 +65,18 @@ class Products extends Component {
          },
       ];
 
+      const filteredProducts = products.filter((product) => {
+         return (
+            product.name.toLowerCase().includes(productName.toLowerCase()) ||
+            country === '' ||
+            product.origin.toLowerCase() === country.toLowerCase()
+         );
+      });
+
       return (
          <div className={styles.products}>
             <div className={styles.products__wrapper}>
-               {products.map((product, i) => (
+               {filteredProducts.map((product, i) => (
                   <ProductItem
                      key={i}
                      img={product.img}

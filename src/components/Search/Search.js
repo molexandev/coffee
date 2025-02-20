@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Search.module.scss';
 
-const Search = (onProductNameChange) => {
+const Search = ({ onProductNameChange, onCountryChange }) => {
    return (
       <div className="container">
          <div className={styles.search__wrapper}>
@@ -14,14 +14,32 @@ const Search = (onProductNameChange) => {
                   type="text"
                   id="search"
                   placeholder="start typing here..."
-                  value={onProductNameChange}
+                  onChange={onProductNameChange}
                />
             </div>
             <div className={styles.search__buttons}>
                <p className={styles.search__title}>Or filter</p>
-               <button className={styles.search__btn}>Brazil</button>
-               <button className={styles.search__btn}>Kenya</button>
-               <button className={styles.search__btn}>Columbia </button>
+               <button
+                  className={styles.search__btn}
+                  onClick={() => onCountryChange('Brazil')}
+                  value={'Brazil'}
+               >
+                  Brazil
+               </button>
+               <button
+                  className={styles.search__btn}
+                  onClick={() => onCountryChange('Kenya')}
+                  value={'Kenya'}
+               >
+                  Kenya
+               </button>
+               <button
+                  className={styles.search__btn}
+                  onClick={() => onCountryChange('Columbia')}
+                  value={'Columbia'}
+               >
+                  Columbia
+               </button>
             </div>
          </div>
       </div>

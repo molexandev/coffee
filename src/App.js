@@ -22,8 +22,8 @@ class App extends Component {
       this.setState({ productName: event.target.value });
    };
 
-   onCountryChange = (e) => {
-      this.setState({ country: e.target.value });
+   onCountryChange = (country) => {
+      this.setState({ country });
    };
 
    render() {
@@ -32,26 +32,24 @@ class App extends Component {
             <div className="App">
                <div className="wrapper">
                   <Routes>
+                     <Route
+                        path="/category"
+                        element={
+                           <Category
+                              onProductNameChange={this.onProductNameChange}
+                              onCountryChange={this.onCountryChange}
+                              productName={this.state.productName} // Передаємо назву продукту
+                              country={this.state.country} // Передаємо вибрану країну
+                           />
+                        }
+                     />
                      <Route path="/" element={<HomePage />} />
-                     <Route path="/category" element={<Category />} />
                      <Route path="/info" element={<ForYourPleasure />} />
                      <Route path="/product" element={<ProductCard />} />
                   </Routes>
                   <Footer />
-                  {/* <div
-                     className="aaa"
-                     style={{
-                        width: 500,
-                        height: 500,
-                        backgroundColor: 'red',
-                        color: 'black',
-                     }}
-                  >
-                     {this.state.productName}
-                  </div> */}
                </div>
             </div>
-            <search onProductNameChange={this.onProductNameChange} />
          </Router>
       );
    }
