@@ -15,6 +15,10 @@ class Search extends Component {
       this.props.onUpdateSearch(term);
    };
 
+   filterByCountry = (e) => {
+      console.log(e.target.value);
+   };
+
    render() {
       return (
          <div className="container">
@@ -30,29 +34,28 @@ class Search extends Component {
                      placeholder="start typing here..."
                      value={this.state.term}
                      onChange={this.onUpdateSearch}
-                     // onChange={onProductNameChange}
                   />
                </div>
                <div className={styles.search__buttons}>
                   <p className={styles.search__title}>Or filter</p>
                   <button
                      className={styles.search__btn}
-                     // onClick={() => onCountryChange('Brazil')}
                      value={'Brazil'}
+                     onClick={this.filterByCountry}
                   >
                      Brazil
                   </button>
                   <button
                      className={styles.search__btn}
-                     // onClick={() => onCountryChange('Kenya')}
                      value={'Kenya'}
+                     onClick={this.filterByCountry}
                   >
                      Kenya
                   </button>
                   <button
                      className={styles.search__btn}
-                     // onClick={() => onCountryChange('Columbia')}
                      value={'Columbia'}
+                     onClick={this.filterByCountry}
                   >
                      Columbia
                   </button>

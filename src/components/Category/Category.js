@@ -7,7 +7,7 @@ import Products from '../Products/Products';
 
 class Category extends Component {
    render() {
-      const { data, onUpdateSearch } = this.props;
+      const { data, onUpdateSearch, filterByCountry } = this.props;
 
       return (
          <>
@@ -39,7 +39,10 @@ class Category extends Component {
                      />
                   </section>
                   <section className={styles.search}>
-                     <Search onUpdateSearch={onUpdateSearch} />
+                     <Search
+                        onUpdateSearch={onUpdateSearch}
+                        filterByCountry={filterByCountry}
+                     />
                   </section>
                   <section className={styles.product_items}>
                      <Products data={data} />
