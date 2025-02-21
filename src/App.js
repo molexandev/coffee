@@ -89,10 +89,13 @@ class App extends Component {
       this.setState({ term });
    };
 
+   filterByCountry = () => {
+      console.log('aaa');
+   };
+
    render() {
       const { products, term } = this.state;
       const visibleData = this.searchName(products, term);
-      // console.log(visibleData);
 
       return (
          <Router>
@@ -105,6 +108,7 @@ class App extends Component {
                            <Category
                               data={visibleData}
                               onUpdateSearch={this.onUpdateSearch}
+                              filterByCountry={this.filterByCountry}
                            />
                         }
                      />
