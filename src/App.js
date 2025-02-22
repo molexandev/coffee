@@ -72,6 +72,7 @@ class App extends Component {
             },
          ],
          term: '',
+         country: '',
       };
    }
 
@@ -89,8 +90,18 @@ class App extends Component {
       this.setState({ term });
    };
 
-   filterByCountry = () => {
-      console.log('aaa');
+   filterByCountry = (items, country) => {
+      if (country.length === 0) {
+         return items;
+      }
+
+      return items.filter((item) => {
+         return item.origin.indexOf(country) > -1;
+      });
+   };
+
+   onUpdateCountry = (country) => {
+      this.setState({ country });
    };
 
    render() {

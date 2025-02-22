@@ -6,6 +6,7 @@ class Search extends Component {
       super(props);
       this.state = {
          term: '',
+         country: '',
       };
    }
 
@@ -38,6 +39,13 @@ class Search extends Component {
                </div>
                <div className={styles.search__buttons}>
                   <p className={styles.search__title}>Or filter</p>
+                  <button
+                     className={styles.search__btn}
+                     value={'Show all'}
+                     onClick={this.filterByCountry}
+                  >
+                     Show all
+                  </button>
                   <button
                      className={styles.search__btn}
                      value={'Brazil'}
