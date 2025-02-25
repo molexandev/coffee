@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cee57be8.css",
+    "main.js": "/static/js/main.bbe3b7ed.js",
+    "static/js/488.f7a32fd5.chunk.js": "/static/js/488.f7a32fd5.chunk.js",
+    "static/media/our-best-bg.jpg": "/static/media/our-best-bg.3cd34c026d39e06100f4.jpg",
+    "static/media/home-banner.jpg": "/static/media/home-banner.af8a1c441d80b0172326.jpg",
+    "static/media/header-add-banner.jpg": "/static/media/header-add-banner.d34737e8ac6791926651.jpg",
+    "static/media/header-add-banner-info.jpg": "/static/media/header-add-banner-info.048a7204ee6784d985c9.jpg",
+    "static/media/product-image.jpg": "/static/media/product-image.ac1ab1a0c921c57dbb2e.jpg",
+    "static/media/category-info.png": "/static/media/category-info.953df41acbf6568a8ca6.png",
+    "static/media/cup-of-coffe.png": "/static/media/cup-of-coffe.d41239d9897fb0fc06a8.png",
+    "static/media/Merienda-Bold.woff": "/static/media/Merienda-Bold.50c97c52164420927d18.woff",
+    "static/media/Merienda-Regular.woff": "/static/media/Merienda-Regular.ae92524911e862b63ef3.woff",
+    "static/media/coffee-3.png": "/static/media/coffee-3.1371962a803cc314db5c.png",
+    "static/media/product-item-img.png": "/static/media/product-item-img.1371962a803cc314db5c.png",
+    "static/media/coffee-1.png": "/static/media/coffee-1.b38155fa3eb58b47398b.png",
+    "static/media/Merienda-Bold.woff2": "/static/media/Merienda-Bold.de9e50ae46e3643429bb.woff2",
+    "static/media/Merienda-Regular.woff2": "/static/media/Merienda-Regular.a9d49323a8a0f4a6eeaa.woff2",
+    "static/media/coffee-2.png": "/static/media/coffee-2.a00a6616c50694210be1.png",
+    "static/media/logo.svg": "/static/media/logo.0b0adbc2fd8df7bf60feb474a285d938.svg",
+    "static/media/beans-logo-white.svg": "/static/media/beans-logo-white.d8ad06a77a7f633d0c2a.svg",
+    "static/media/beans-logo.svg": "/static/media/beans-logo.023b976cf584c92cb61a.svg",
+    "index.html": "/index.html",
+    "main.cee57be8.css.map": "/static/css/main.cee57be8.css.map",
+    "main.bbe3b7ed.js.map": "/static/js/main.bbe3b7ed.js.map",
+    "488.f7a32fd5.chunk.js.map": "/static/js/488.f7a32fd5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cee57be8.css",
+    "static/js/main.bbe3b7ed.js"
+  ]
+}
