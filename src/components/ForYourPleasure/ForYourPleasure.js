@@ -4,7 +4,7 @@ import HeaderAdd from '../HeaderAdd/.HeaderAdd';
 import InfoBlock from '../InfoBlock/InfoBlock';
 import Products from '../Products/Products';
 
-const ForYourPleasure = () => {
+const ForYourPleasure = ({ products }) => {
    return (
       <>
          <HeaderAdd
@@ -36,7 +36,7 @@ const ForYourPleasure = () => {
             </section>
             <section className={styles.products}>
                <div className="container">
-                  <Products />
+                  <Products data={products} />
                </div>
             </section>
          </main>

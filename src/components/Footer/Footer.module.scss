@@ -12,16 +12,15 @@
          padding: 0;
       }
       svg {
-         fill: #000;
          stroke: #000;
+         transition: all 0.3s;
       }
       a {
          color: #000;
       }
       a:hover {
-         .nav__logo {
-            // fill: $hover;
-            stroke: #ff0;
+         svg {
+            stroke: $hover;
          }
       }
    }

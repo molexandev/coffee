@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styles from './Products.module.scss';
 import ProductItem from '../ProductItem/ProductItem';
-// import { data } from 'react-router-dom';
 
 class Products extends Component {
    constructor(props) {
@@ -13,6 +12,11 @@ class Products extends Component {
 
    render() {
       const { data } = this.props;
+
+      if (!data || !Array.isArray(data) || data.length === 0) {
+         return <p>No products available</p>;
+      }
+
       return (
          <div className={styles.products}>
             <div className={styles.products__wrapper}>
@@ -31,12 +35,5 @@ class Products extends Component {
       );
    }
 }
-
-// key={i}
-// img={product.img}
-// name={product.name}
-// origin={product.origin}
-// price={product.price}
-// currency={product.currency}
 
 export default Products;

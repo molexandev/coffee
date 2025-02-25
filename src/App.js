@@ -133,7 +133,10 @@ class App extends Component {
                         }
                      />
                      <Route path="/" element={<HomePage />} />
-                     <Route path="/info" element={<ForYourPleasure />} />
+                     <Route
+                        path="/info"
+                        element={<ForYourPleasure products={products} />}
+                     />
                      <Route path="/product" element={<ProductCard />} />
                   </Routes>
                   <Footer />
