@@ -7,7 +7,7 @@ import Products from '../Products/Products';
 
 class Category extends Component {
    render() {
-      const { data, onUpdateSearch, filterByCountry } = this.props;
+      const { data, products, onUpdateSearch, filterByCountry } = this.props;
 
       return (
          <>
@@ -45,7 +45,7 @@ class Category extends Component {
                      />
                   </section>
                   <section className={styles.product_items}>
-                     <Products data={data} />
+                     <Products data={data} products={products} />
                   </section>
                </div>
             </main>
