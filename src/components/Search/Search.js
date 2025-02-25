@@ -5,6 +5,12 @@ class Search extends Component {
    constructor(props) {
       super(props);
       this.state = {
+         buttonsData: [
+            { name: 'Show all' },
+            { name: 'Brazil' },
+            { name: 'Kenya' },
+            { name: 'Columbia' },
+         ],
          term: '',
          country: '',
       };
@@ -17,10 +23,15 @@ class Search extends Component {
    };
 
    filterByCountry = (e) => {
-      console.log(e.target.value);
+      const country = e.target.value;
+      console.log(country);
+      this.setState({ country });
+      this.props.filterByCountry(country);
    };
 
    render() {
+      const buttons = this.state.buttonsData;
+
       return (
          <div className="container">
             <div className={styles.search__wrapper}>
@@ -39,34 +50,16 @@ class Search extends Component {
                </div>
                <div className={styles.search__buttons}>
                   <p className={styles.search__title}>Or filter</p>
-                  <button
-                     className={styles.search__btn}
-                     value={'Show all'}
-                     onClick={this.filterByCountry}
-                  >
-                     Show all
-                  </button>
-                  <button
-                     className={styles.search__btn}
-                     value={'Brazil'}
-                     onClick={this.filterByCountry}
-                  >
-                     Brazil
-                  </button>
-                  <button
-                     className={styles.search__btn}
-                     value={'Kenya'}
-                     onClick={this.filterByCountry}
-                  >
-                     Kenya
-                  </button>
-                  <button
-                     className={styles.search__btn}
-                     value={'Columbia'}
-                     onClick={this.filterByCountry}
-                  >
-                     Columbia
-                  </button>
+                  {buttons.map((item) => (
+                     <button
+                        key={item.name}
+                        className={styles.search__btn}
+                        value={item.name}
+                        onClick={this.filterByCountry}
+                     >
+                        {item.name}
+                     </button>
+                  ))}
                </div>
             </div>
          </div>

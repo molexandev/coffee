@@ -91,13 +91,18 @@ class App extends Component {
    };
 
    filterByCountry = (items, country) => {
-      if (country.length === 0) {
-         return items;
+      switch (country) {
+         case 'Show all':
+            return items;
+         case 'Brazil':
+            return items.filter((item) => item.origin === 'Brazil');
+         case 'Kenya':
+            return items.filter((item) => item.origin === 'Kenya');
+         case 'Columbia':
+            return items.filter((item) => item.origin === 'Columbia');
+         default:
+            return items;
       }
-
-      return items.filter((item) => {
-         return item.origin.indexOf(country) > -1;
-      });
    };
 
    onUpdateCountry = (country) => {
@@ -105,8 +110,12 @@ class App extends Component {
    };
 
    render() {
-      const { products, term } = this.state;
-      const visibleData = this.searchName(products, term);
+      const { products, term, country } = this.state;
+      const visibleData = this.filterByCountry(
+         this.searchName(products, term),
+         country
+      );
+      // const visibleProducts = this.filterByCountry(products, country);
 
       return (
          <Router>
@@ -119,7 +128,7 @@ class App extends Component {
                            <Category
                               data={visibleData}
                               onUpdateSearch={this.onUpdateSearch}
-                              filterByCountry={this.filterByCountry}
+                              filterByCountry={this.onUpdateCountry}
                            />
                         }
                      />
