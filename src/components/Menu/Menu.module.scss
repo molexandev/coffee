@@ -14,16 +14,6 @@
    }
    &__list:first-child {
       padding-left: 31px;
-      // position: relative;
-      // &::before {
-      //    content: '';
-      //    position: absolute;
-      //    width: 35px;
-      //    height: 35px;
-      //    left: -5px;
-      //    top: 0;
-      //    background-image: url(/assets/images/logo.svg);
-      // }
    }
    &__logo {
       position: absolute;
@@ -41,11 +31,16 @@
       transition: all 0.3s;
       @extend %Merienda-400;
    }
+   svg {
+      stroke: #fff;
+      fill: #fff;
+      transition: all 0.3s;
+   }
    &__link:hover {
       color: $hover;
-      .nav__logo {
-         fill: $hover;
+      svg {
          stroke: $hover;
+         fill: $hover;
       }
    }
 }
